@@ -1,0 +1,39 @@
+spring: 
+  application: 
+    name: account-service 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    
+    show-sql: true
+ 
+    database: h2   
+    
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+   
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql:trace
+
+server: 
+  port: 6065 
+ 
+#eureka: 
+#  client: 
+ #   service-url: 
+  #    prefer-same-zone-eureka: false
+   #   defaultZone: ${EUREKA_URI:http://172.16.1.119:8761/eureka} 
+  #instance: 
+   # prefer-ip-address: true
+
+ 
+    
